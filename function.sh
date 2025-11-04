@@ -6,15 +6,13 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f "/usr/share/fzf/key-bindings.zsh" ] && source "/usr/share/fzf/key-bindings.zsh"
 [ -f "/usr/share/fzf/completion.zsh" ] && source "/usr/share/fzf/completion.zsh"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 export PATH="$HOME/.heroku-cli/heroku/bin:$PATH"
 eval "$(fasd --init auto)"
 
 alias lsd="exa --icons"
 alias bat="bat --style=auto"
-alias pgstop="sudo systemctl stop postgresql"
-alias pgstart="sudo systemctl start postgresql"
+alias supabase="npx supabase"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -24,4 +22,3 @@ setopt appendhistory
 setopt sharehistory
 setopt extendedhistory
 setopt hist_ignore_dups
-
