@@ -1,5 +1,5 @@
 	camera-setup () {
-        deviceName="C920"
+        deviceName="USB Camera"
         device=$(v4l2-ctl --list-devices | grep -A 1 $deviceName | tail  -n 1 | sed 's/\t//')
         bright=${1:-255}
         echo "Setting bright in $device to $bright..."
